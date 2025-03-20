@@ -36,10 +36,13 @@
             --body-bg: var(--light);
             --text-color: var(--dark);
             --header-bg: var(--white);
-            --section-bg: var(--white); /* Added for sections like About, Contact */
+            --section-bg: var(--white);
+            /* Added for sections like About, Contact */
             --portfolio-bg: var(--gray-100);
-            --contact-item-bg: var(--gray-100); /* Added for contact items */
-            --form-bg: var(--gray-100); /* Added for contact form */
+            --contact-item-bg: var(--gray-100);
+            /* Added for contact items */
+            --form-bg: var(--gray-100);
+            /* Added for contact form */
             --footer-bg: var(--dark);
             --footer-text: var(--white);
         }
@@ -49,10 +52,13 @@
             --body-bg: #121212;
             --text-color: #ffffff;
             --header-bg: #1e1e1e;
-            --section-bg: #333; /* Darkened section background */
+            --section-bg: #333;
+            /* Darkened section background */
             --portfolio-bg: #252525;
-            --contact-item-bg: #444; /* Darkened contact item background */
-            --form-bg: #333; /* Darkened form background */
+            --contact-item-bg: #444;
+            /* Darkened contact item background */
+            --form-bg: #333;
+            /* Darkened form background */
             --footer-bg: #000000;
             --footer-text: #d4d4d4;
         }
@@ -87,7 +93,8 @@
         section {
             padding: 80px 0;
             position: relative;
-            background-color: var(--section-bg); /* Applied background color */
+            background-color: var(--section-bg);
+            /* Applied background color */
             transition: background-color 0.3s ease;
         }
 
@@ -100,7 +107,8 @@
             font-weight: 700;
             line-height: 1.2;
             margin-bottom: 1rem;
-            color: var(--text-color); /* Inherit text color */
+            color: var(--text-color);
+            /* Inherit text color */
         }
 
         p {
@@ -288,6 +296,7 @@
             display: flex;
             list-style: none;
             margin: 0;
+            align-items: center; /* Align items vertically in the list */
         }
 
         nav ul li {
@@ -321,6 +330,57 @@
             display: none;
             cursor: pointer;
             font-size: 1.5rem;
+        }
+
+        /* Dark Mode Toggle Slider */
+        .dark-mode-toggle {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+            margin-right: 10px; /* Add some spacing between elements */
+        }
+
+        .dark-mode-toggle input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked+.slider {
+            background-color: #2196F3;
+        }
+
+        input:focus+.slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(20px);
         }
 
         /* Hero Section */
@@ -383,13 +443,6 @@
         .typewriter {
             display: inline-block;
             position: relative;
-        }
-
-        .typewriter::after {
-            content: "|";
-            position: absolute;
-            right: -8px;
-            animation: blink 0.7s infinite;
         }
 
         @keyframes blink {
@@ -809,7 +862,6 @@
         .contact-icon {
             width: 50px;
             height: 50px;
-            border-radius: 50%;
             background-color: var(--white);
             display: flex;
             justify-content: center;
@@ -1082,8 +1134,7 @@
                 top: 70px;
                 left: -100%;
                 width: 80%;
-                height: calc(100vh - 70px);
-                background-color: var(--white);
+                height: calc(100vh - 70px);                background-color: var(--white);
                 flex-direction: column;
                 padding: 20px;
                 transition: var(--transition);
@@ -1133,13 +1184,76 @@
                 font-size: 1.5rem;
             }
 
-            .btn {                padding: 10px 20px;
+            .btn {
+                padding: 10px 20px;
             }
 
             .portfolio-grid,
             .cert-grid {
                 grid-template-columns: 1fr;
             }
+        }
+
+        /* Dark Mode Toggle Slider */
+        .dark-mode-toggle {
+            position: relative;
+            display: inline-block;
+            width: 40px;
+            height: 20px;
+            margin-right: 10px;
+            /* Add some spacing between elements */
+        }
+
+        .dark-mode-toggle input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked+.slider {
+            background-color: #2196F3;
+        }
+
+        input:focus+.slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(20px);
+        }
+        #languageToggle {
+            padding: 10px 5px;
+            color: var(--text-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        #languageToggle:hover {
+            color: var(--primary);
         }
     </style>
 </head>
@@ -1150,25 +1264,32 @@
         <div class="container">
             <nav>
                 <a href="#" class="logo">Sony<span style="color: var(--dark);">Alfauzan</span></a>
+
+                <!-- Add language and dark mode toogles here -->
+                <div style="display: flex; align-items: center;">
+                    <!-- Dark Mode Toggle -->
+                    <label class="dark-mode-toggle">
+                        <input type="checkbox" id="darkModeCheckbox">
+                        <span class="slider"></span>
+                    </label>
+                    <!-- Language Toggle -->
+                    <a href="#" id="languageToggle" onclick="toggleLanguage()" style="padding: 10px 5px;"
+                        data-i18n="language">EN</a>
+                </div>
+
                 <div class="menu-toggle">
                     <i class="fas fa-bars"></i>
                 </div>
                 <ul id="menu">
-                    <li><a href="#home" class="active">Beranda</a></li>
-                    <li><a href="#about">Tentang Saya</a></li>
-                    <li><a href="#portfolio">Portofolio</a></li>
-                    <li><a href="#certifications">Sertifikasi</a></li>
-                    <li><a href="#contact">Kontak</a></li>
+                    <li><a href="#home" class="active" data-i18n="footer.home">Beranda</a></li>
+                    <li><a href="#about" data-i18n="footer.about">Tentang Saya</a></li>
+                    <li><a href="#portfolio" data-i18n="footer.portfolio">Portofolio</a></li>
+                    <li><a href="#certifications" data-i18n="footer.certifications">Sertifikasi</a></li>
+                    <li><a href="#contact" data-i18n="footer.contact">Kontak</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
-    <!-- Toggles -->
-    <div style="position: fixed; top: 20px; right: 20px; z-index: 1000; display: flex; gap: 10px;">
-        <button id="darkModeToggle" onclick="toggleDarkMode()" style="padding: 8px; cursor: pointer;">Mode Gelap</button>
-        <button id="languageToggle" onclick="toggleLanguage()" style="padding: 8px; cursor: pointer;">Bahasa</button>
-    </div>
 
     <!-- Hero Section -->
     <section id="home">
@@ -1631,7 +1752,6 @@
         <div class="container">
             <div class="section-title">
                 <span class="section-subtitle" data-i18n="contact.title">KONTAK</span>
-                <h2 data-i18n="contact.subtitle">Hubungi Saya</h2>
                 <p data-i18n="contact.description">Jika Anda memiliki pertanyaan, proyek, atau kolaborasi yang ingin
                     didiskusikan, jangan ragu untuk menghubungi saya. Saya selalu terbuka untuk peluang baru dan ide-ide
                     menarik.</p>
@@ -1669,35 +1789,6 @@
                 </div>
             </div>
 
-            <div class="contact-form">
-                <form id="contactForm">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Nama Anda" required>
-                        <div class="error-message" id="nameError" data-i18n="contact.nameError">Nama harus diisi.</div>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Email Anda" required>
-                        <div class="error-message" id="emailError" data-i18n="contact.emailError">Email tidak valid.</div>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subjek" required>
-                        <div class="error-message" id="subjectError" data-i18n="contact.subjectError">Subjek harus diisi.</div>
-                    </div>
-
-                    <div class="form-group">
-                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Pesan Anda"
-                            required></textarea>
-                        <div class="error-message" id="messageError" data-i18n="contact.messageError">Pesan harus diisi.</div>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary" data-i18n="contact.submit">Kirim Pesan</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -1725,7 +1816,7 @@
     <script>
         // JavaScript
         const body = document.getElementById('body');
-        const darkModeToggle = document.getElementById('darkModeToggle');
+        const darkModeCheckbox = document.getElementById('darkModeCheckbox');
         const languageToggle = document.getElementById('languageToggle');
 
         let darkMode = localStorage.getItem('darkMode') === 'enabled';
@@ -1736,7 +1827,7 @@
             currentLanguage = lang;
             localStorage.setItem('language', lang);
             translatePage();
-            updateLanguageButtonText(); // Update the language button text after setting language
+            updateLanguageButtonText();
         }
 
         // Function to update the language button text
@@ -1820,7 +1911,7 @@
                     "portfolio.project9Description": "Movie recommendation system using content-based filtering and collaborative filtering with the MovieLens 100K dataset, achieving Precision@5 100% and RMSE 0.9406.",
                     "portfolio.project10Title": "Image Classification (Rock-Paper-Scissors)",
                     "portfolio.project10Description": "Neural network using TensorFlow to recognize hand shapes forming scissors, rock, or paper.",
-                    "contact.title": "CONTACT",
+                    "contact.title": "KONTAK",
                     "contact.subtitle": "Contact Me",
                     "contact.description": "If you have any questions, projects, or collaborations you would like to discuss, feel free to contact me. I am always open to new opportunities and exciting ideas.",
                     "contact.addressTitle": "Address",
@@ -1830,13 +1921,13 @@
                     "contact.nameError": "Name must be filled.",
                     "contact.emailError": "Invalid email.",
                     "contact.subjectError": "Subject must be filled.",
-                    "contact.messageError": "Message must be filled.",
-                    "contact.submit": "Send Message",
-                    "footer.home": "Home",
-                    "footer.about": "About Me",
-                    "footer.portfolio": "Portfolio",
-                    "footer.certifications": "Certifications",
-                    "footer.contact": "Contact"
+                    "contact.messageError": "Pesan harus diisi.",
+                    "contact.submit": "Kirim Pesan",
+                    "footer.home": "Beranda",
+                    "footer.about": "Tentang Saya",
+                    "footer.portfolio": "Portofolio",
+                    "footer.certifications": "Sertifikasi",
+                    "footer.contact": "Kontak"
                 },
                 id: {
                     "hero.greeting": "Halo 👋, saya",
@@ -1955,18 +2046,13 @@
         function toggleDarkMode() {
             darkMode = !darkMode;
             localStorage.setItem('darkMode', darkMode ? 'enabled' : 'disabled');
-            updateDarkMode(); // Call updateDarkMode function to apply dark mode
+            updateDarkMode();
         }
 
         // Function to update the dark mode
         function updateDarkMode() {
-            if (darkMode) {
-                body.classList.add('dark-mode');
-                darkModeToggle.textContent = 'Mode Terang'; // Update button text
-            } else {
-                body.classList.remove('dark-mode');
-                darkModeToggle.textContent = 'Mode Gelap'; // Update button text
-            }
+            body.classList.toggle('dark-mode', darkMode);
+            darkModeCheckbox.checked = darkMode;
         }
 
         // Set initial dark mode
@@ -1977,6 +2063,11 @@
 
         // Update the language button text
         updateLanguageButtonText();
+
+        // Add event listener to dark mode checkbox
+        darkModeCheckbox.addEventListener('change', function () {
+            toggleDarkMode();
+        });
 
         // Menu Toggle
         const menuToggle = document.querySelector('.menu-toggle');
