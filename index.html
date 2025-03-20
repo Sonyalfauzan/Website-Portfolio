@@ -36,7 +36,10 @@
             --body-bg: var(--light);
             --text-color: var(--dark);
             --header-bg: var(--white);
+            --section-bg: var(--white); /* Added for sections like About, Contact */
             --portfolio-bg: var(--gray-100);
+            --contact-item-bg: var(--gray-100); /* Added for contact items */
+            --form-bg: var(--gray-100); /* Added for contact form */
             --footer-bg: var(--dark);
             --footer-text: var(--white);
         }
@@ -46,7 +49,10 @@
             --body-bg: #121212;
             --text-color: #ffffff;
             --header-bg: #1e1e1e;
+            --section-bg: #333; /* Darkened section background */
             --portfolio-bg: #252525;
+            --contact-item-bg: #444; /* Darkened contact item background */
+            --form-bg: #333; /* Darkened form background */
             --footer-bg: #000000;
             --footer-text: #d4d4d4;
         }
@@ -81,6 +87,8 @@
         section {
             padding: 80px 0;
             position: relative;
+            background-color: var(--section-bg); /* Applied background color */
+            transition: background-color 0.3s ease;
         }
 
         h1,
@@ -92,6 +100,7 @@
             font-weight: 700;
             line-height: 1.2;
             margin-bottom: 1rem;
+            color: var(--text-color); /* Inherit text color */
         }
 
         p {
@@ -423,7 +432,8 @@
 
         /* About Section */
         #about {
-            background-color: var(--white);
+            background-color: var(--section-bg);
+            transition: background-color 0.3s ease;
         }
 
         .about-content {
@@ -450,6 +460,7 @@
             margin-bottom: 15px;
             position: relative;
             padding-left: 15px;
+            color: var(--text-color);
         }
 
         .info-box h3::before {
@@ -520,6 +531,7 @@
         .experience-title {
             font-weight: 600;
             margin-bottom: 5px;
+            color: var(--text-color);
         }
 
         .experience-company {
@@ -661,6 +673,7 @@
         .portfolio-title {
             font-size: 1.2rem;
             margin-bottom: 10px;
+            color: var(--text-color);
         }
 
         .portfolio-category {
@@ -758,7 +771,8 @@
 
         /* Contact Section */
         #contact {
-            background-color: var(--white);
+            background-color: var(--section-bg);
+            transition: background-color 0.3s ease;
         }
 
         .contact-info {
@@ -771,14 +785,15 @@
         .contact-item {
             flex: 1;
             min-width: 250px;
-            background-color: var(--gray-100);
+            background-color: var(--contact-item-bg);
+            transition: background-color 0.3s ease, color 0.3s ease;
             padding: 25px;
             border-radius: 10px;
             display: flex;
             align-items: center;
             gap: 15px;
             box-shadow: var(--shadow);
-            transition: var(--transition);
+
         }
 
         .contact-item:hover {
@@ -812,10 +827,12 @@
         .contact-content h3 {
             font-size: 1.1rem;
             margin-bottom: 5px;
+            color: var(--text-color);
         }
 
         .contact-form {
-            background-color: var(--gray-100);
+            background-color: var(--form-bg);
+            transition: background-color 0.3s ease;
             padding: 30px;
             border-radius: 10px;
             box-shadow: var(--shadow);
@@ -1116,8 +1133,7 @@
                 font-size: 1.5rem;
             }
 
-            .btn {
-                padding: 10px 20px;
+            .btn {                padding: 10px 20px;
             }
 
             .portfolio-grid,
