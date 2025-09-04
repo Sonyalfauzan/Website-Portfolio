@@ -38,7 +38,7 @@
     
     <!-- External CSS Libraries -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+        xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1734,230 +1734,227 @@
 
    <!-- Portfolio Section -->
    <section id="portfolio">
+       <div class="container">
+           <div class="section-title">
+               <span class="section-subtitle" data-i18n="portfolio.title">PORTOFOLIO</span>
+           </div>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio">
-        <div class="container">
-            <div class="section-title">
-                <span class="section-subtitle" data-i18n="portfolio.title">PORTOFOLIO</span>
-            </div>
+           <div class="portfolio-filter">
+               <button class="filter-btn active" data-filter="all" data-i18n="portfolio.filterAll">Semua</button>
+               <button class="filter-btn" data-filter="machine-learning"
+                   data-i18n="portfolio.filterML">Machine Learning</button>
+               <button class="filter-btn" data-filter="web" data-i18n="portfolio.filterWeb">Web Development</button>
+               <button class="filter-btn" data-filter="data" data-i18n="portfolio.filterData">Data Analysis</button>
+           </div>
 
-            <div class="portfolio-filter">
-                <button class="filter-btn active" data-filter="all" data-i18n="portfolio.filterAll">Semua</button>
-                <button class="filter-btn" data-filter="machine-learning"
-                    data-i18n="portfolio.filterML">Machine Learning</button>
-                <button class="filter-btn" data-filter="web" data-i18n="portfolio.filterWeb">Web Development</button>
-                <button class="filter-btn" data-filter="data" data-i18n="portfolio.filterData">Data Analysis</button>
-            </div>
+           <div class="portfolio-grid">
 
-            <div class="portfolio-grid">
+               <!-- Project 1: Interactive Weather Data Visualization -->
+               <div class="portfolio-item" data-category="data">
+                   <div class="portfolio-image">
+                       <img src="https://media.giphy.com/media/QRhtqYeEywJI4/giphy.gif?cid=ecf05e4723x93ez5qdz0sv00g0u7q5qerl2tq5a61dqp0cb7&ep=v1_gifs_related&rid=giphy.gif&ct=g"
+                           alt="Interactive Weather Data Visualization">
+                       <div class="portfolio-overlay">
+                           <a href="https://projecttask.shinyapps.io/my_shiny_app/" target="_blank" title="View Project"><i
+                                   class="fas fa-link"></i></a>
+                       </div>
+                   </div>
+                   <div class="portfolio-content">
+                       <h3 class="portfolio-title" data-i18n="portfolio.project1Title">Interactive Weather Data
+                           Visualization</h3>
+                       <div class="portfolio-category">Data Analysis, R, Shiny</div>
+                       <p data-i18n="portfolio.project1Description">Visualisasi interaktif data cuaca menggunakan R Shiny
+                           untuk eksplorasi tren dan pola cuaca.</p>
+                   </div>
+               </div>
 
-                <!-- Project 1: Interactive Weather Data Visualization -->
-                <div class="portfolio-item" data-category="data">
-                    <div class="portfolio-image">
-                        <img src="https://media.giphy.com/media/QRhtqYeEywJI4/giphy.gif?cid=ecf05e4723x93ez5qdz0sv00g0u7q5qerl2tq5a61dqp0cb7&ep=v1_gifs_related&rid=giphy.gif&ct=g"
-                            alt="Interactive Weather Data Visualization">
-                        <div class="portfolio-overlay">
-                            <a href="https://projecttask.shinyapps.io/my_shiny_app/" target="_blank" title="View Project"><i
-                                    class="fas fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3 class="portfolio-title" data-i18n="portfolio.project1Title">Interactive Weather Data
-                            Visualization</h3>
-                        <div class="portfolio-category">Data Analysis, R, Shiny</div>
-                        <p data-i18n="portfolio.project1Description">Visualisasi interaktif data cuaca menggunakan R Shiny
-                            untuk eksplorasi tren dan pola cuaca.</p>
-                    </div>
-                </div>
+               <!-- Project 2: Data Analysis Project -->
+               <div class="portfolio-item" data-category="data">
+                   <div class="portfolio-image">
+                       <img src="https://media.giphy.com/media/3oKIPEqDGUULpEU0aQ/giphy.gif?cid=ecf05e47l8w1f93at7ktsfng8p5pgp00bgav50wpbdu1i03m&ep=v1_gifs_related&rid=giphy.gif&ct=g"
+                           alt="Data Analysis Project">
+                       <div class="portfolio-overlay">
+                           <a href="https://sonyalfauzan-submission-proyek-analisis-data-dashboard-ynw6qf.streamlit.app/"
+                               target="_blank" title="View Project"><i class="fas fa-link"></i></a>
+                           <a href="https://www.dicoding.com/certificates/1RXYLGK21PVM" target="_blank"
+                               title="View Certificate"><i class="fas fa-certificate"></i></a>
+                       </div>
+                   </div>
+                   <div class="portfolio-content">
+                       <h3 class="portfolio-title" data-i18n="portfolio.project2Title">Proyek Analisis Data</h3>
+                       <div class="portfolio-category">Data Analysis, Python, Streamlit</div>
+                       <p data-i18n="portfolio.project2Description">Dashboard interaktif yang menampilkan hasil dari proses data
+                           wrangling dan exploratory data analysis (EDA) menggunakan Python dan Streamlit.</p>
+                   </div>
+               </div>
 
-                <!-- Project 2: Data Analysis Project -->
-                <div class="portfolio-item" data-category="data">
-                    <div class="portfolio-image">
-                        <img src="https://media.giphy.com/media/3oKIPEqDGUULpEU0aQ/giphy.gif?cid=ecf05e47l8w1f93at7ktsfng8p5pgp00bgav50wpbdu1i03m&ep=v1_gifs_related&rid=giphy.gif&ct=g"
-                            alt="Data Analysis Project">
-                        <div class="portfolio-overlay">
-                            <a href="https://sonyalfauzan-submission-proyek-analisis-data-dashboard-ynw6qf.streamlit.app/"
-                                target="_blank" title="View Project"><i class="fas fa-link"></i></a>
-                            <a href="https://www.dicoding.com/certificates/1RXYLGK21PVM" target="_blank"
-                                title="View Certificate"><i class="fas fa-certificate"></i></a>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3 class="portfolio-title" data-i18n="portfolio.project2Title">Proyek Analisis Data</h3>
-                        <div class="portfolio-category">Data Analysis, Python, Streamlit</div>
-                        <p data-i18n="portfolio.project2Description">Dashboard interaktif yang menampilkan hasil dari proses data
-                            wrangling dan exploratory data analysis (EDA) menggunakan Python dan Streamlit.</p>
-                    </div>
-                </div>
+               <!-- Project 3: Heart Failure Prediction -->
+               <div class="portfolio-item" data-category="machine-learning">
+                   <div class="portfolio-image">
+                       <img src="https://media.giphy.com/media/Wt13kTjHjBBAuSs3vQ/giphy.gif?cid=ecf05e47t9153cw68m91jmz5kg9pnc1znhpsmr5mf7r3porx&ep=v1_gifs_related&rid=giphy.gif&ct=g"
+                           alt="Heart Failure Prediction">
+                       <div class="portfolio-overlay">
+                           <a href="https://heart-failure-prediction-app.streamlit.app/" target="_blank"
+                               title="View Project"><i class="fas fa-link"></i></a>
+                       </div>
+                   </div>
+                   <div class="portfolio-content">
+                       <h3 class="portfolio-title" data-i18n="portfolio.project3Title">Sistem Prediksi Risiko Gagal Jantung</h3>
+                       <div class="portfolio-category">Machine Learning, Python, Streamlit</div>
+                       <p data-i18n="portfolio.project3Description">Model machine learning dengan akurasi 92.39% untuk
+                           memprediksi risiko gagal jantung, menggunakan Random Forest, XGBoost, dan Neural Network dengan
+                           dashboard interaktif.</p>
+                   </div>
+               </div>
 
-                <!-- Project 3: Heart Failure Prediction -->
-                <div class="portfolio-item" data-category="machine-learning">
-                    <div class="portfolio-image">
-                        <img src="https://media.giphy.com/media/Wt13kTjHjBBAuSs3vQ/giphy.gif?cid=ecf05e47t9153cw68m91jmz5kg9pnc1znhpsmr5mf7r3porx&ep=v1_gifs_related&rid=giphy.gif&ct=g"
-                            alt="Heart Failure Prediction">
-                        <div class="portfolio-overlay">
-                            <a href="https://heart-failure-prediction-app.streamlit.app/" target="_blank"
-                                title="View Project"><i class="fas fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3 class="portfolio-title" data-i18n="portfolio.project3Title">Sistem Prediksi Risiko Gagal Jantung</h3>
-                        <div class="portfolio-category">Machine Learning, Python, Streamlit</div>
-                        <p data-i18n="portfolio.project3Description">Model machine learning dengan akurasi 92.39% untuk
-                            memprediksi risiko gagal jantung, menggunakan Random Forest, XGBoost, dan Neural Network dengan
-                            dashboard interaktif.</p>
-                    </div>
-                </div>
+               <!-- Project 4: Split Bill App -->
+               <div class="portfolio-item" data-category="web">
+                   <div class="portfolio-image">
+                       <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWoyYmtkc3I4eTRtYmg5YW42bWNwdmJtNWZkdnVkdGgybGtmaGFqdSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/STkBEojfeImdaLk8eh/giphy.gif"
+                           alt="Split Bill App">
+                       <div class="portfolio-overlay">
+                           <a href="https://www.codepolitan.com/c/ISEQWBK/" target="_blank" title="View Project"><i
+                                   class="fas fa-link"></i></a>
+                       </div>
+                   </div>
+                   <div class="portfolio-content">
+                       <h3 class="portfolio-title" data-i18n="portfolio.project4Title">Aplikasi Split Bill dengan React.js</h3>
+                       <div class="portfolio-category">React.js, Front-end Development</div>
+                       <p data-i18n="portfolio.project4Description">Aplikasi pembagi tagihan responsif dengan manajemen state untuk
+                           mengelola data pengguna, perhitungan saldo real-time, dan antarmuka yang intuitif.</p>
+                   </div>
+               </div>
 
-                <!-- Project 4: Split Bill App -->
-                <div class="portfolio-item" data-category="web">
-                    <div class="portfolio-image">
-                        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcWoyYmtkc3I4eTRtYmg5YW42bWNwdmJtNWZkdnVkdGgybGtmaGFqdSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/STkBEojfeImdaLk8eh/giphy.gif"
-                            alt="Split Bill App">
-                        <div class="portfolio-overlay">
-                            <a href="https://www.codepolitan.com/c/ISEQWBK/" target="_blank" title="View Project"><i
-                                    class="fas fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3 class="portfolio-title" data-i18n="portfolio.project4Title">Aplikasi Split Bill dengan React.js</h3>
-                        <div class="portfolio-category">React.js, Front-end Development</div>
-                        <p data-i18n="portfolio.project4Description">Aplikasi pembagi tagihan responsif dengan manajemen state untuk
-                            mengelola data pengguna, perhitungan saldo real-time, dan antarmuka yang intuitif.</p>
-                    </div>
-                </div>
+               <!-- Project 5: Fullstack Shopping Cart -->
+               <div class="portfolio-item" data-category="web">
+                   <div class="portfolio-image">
+                       <img src="https://media.giphy.com/media/KlKhrRmGuDURcJnEvp/giphy.gif?cid=790b761197zvl5t78fxdfya8lu2dm72v8dc6s2th9pc0plhx&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+                           alt="Fullstack Shopping Cart">
+                       <div class="portfolio-overlay">
+                           <a href="https://www.codepolitan.com/c/EU4TWOL/" target="_blank" title="View Project"><i
+                                   class="fas fa-link"></i></a>
+                       </div>
+                   </div>
+                   <div class="portfolio-content">
+                       <h3 class="portfolio-title" data-i18n="portfolio.project5Title">Fullstack Shopping Cart</h3>
+                       <div class="portfolio-category">MongoDB, Express, Vue, Node</div>
+                       <p data-i18n="portfolio.project5Description">Aplikasi shopping cart fullstack menggunakan MongoDB,
+                           Express, Vue, dan Node.</p>
+                   </div>
+               </div>
 
-                <!-- Project 5: Fullstack Shopping Cart -->
-                <div class="portfolio-item" data-category="web">
-                    <div class="portfolio-image">
-                        <img src="https://media.giphy.com/media/KlKhrRmGuDURcJnEvp/giphy.gif?cid=790b761197zvl5t78fxdfya8lu2dm72v8dc6s2th9pc0plhx&ep=v1_gifs_search&rid=giphy.gif&ct=g"
-                            alt="Fullstack Shopping Cart">
-                        <div class="portfolio-overlay">
-                            <a href="https://www.codepolitan.com/c/EU4TWOL/" target="_blank" title="View Project"><i
-                                    class="fas fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3 class="portfolio-title" data-i18n="portfolio.project5Title">Fullstack Shopping Cart</h3>
-                        <div class="portfolio-category">MongoDB, Express, Vue, Node</div>
-                        <p data-i18n="portfolio.project5Description">Aplikasi shopping cart fullstack menggunakan MongoDB,
-                            Express, Vue, dan Node.</p>
-                    </div>
-                </div>
+               <!-- Project 6: Bookshelf API -->
+               <div class="portfolio-item" data-category="web">
+                   <div class="portfolio-image">
+                       <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3Y3bXo4a3Q2ZG03MTQxZHRocWU5Y2twaTl2dXM3NDFxa2lhMjJjdSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/JzighhW6gGhfmKE0C6/giphy.gif"
+                           alt="Bookshelf API">
+                       <div class="portfolio-overlay">
+                           <a href="https://www.dicoding.com/certificates/MRZM4R69NXYQ" target="_blank"
+                               title="View Project"><i class="fas fa-link"></i></a>
+                       </div>
+                   </div>
+                   <div class="portfolio-content">
+                       <h3 class="portfolio-title" data-i18n="portfolio.project6Title">Bookshelf API</h3>
+                       <div class="portfolio-category">Node.js, Hapi, RESTful API</div>
+                       <p data-i18n="portfolio.project6Description">API menggunakan Node.js dan Hapi framework untuk aplikasi
+                           manajemen buku dengan fitur penambahan, penghapusan, dan pencarian buku.</p>
+                   </div>
+               </div>
 
-                <!-- Project 6: Bookshelf API -->
-                <div class="portfolio-item" data-category="web">
-                    <div class="portfolio-image">
-                        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3Y3bXo4a3Q2ZG03MTQxZHRocWU5Y2twaTl2dXM3NDFxa2lhMjJjdSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/JzighhW6gGhfmKE0C6/giphy.gif"
-                            alt="Bookshelf API">
-                        <div class="portfolio-overlay">
-                            <a href="https://www.dicoding.com/certificates/MRZM4R69NXYQ" target="_blank"
-                                title="View Project"><i class="fas fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3 class="portfolio-title" data-i18n="portfolio.project6Title">Bookshelf API</h3>
-                        <div class="portfolio-category">Node.js, Hapi, RESTful API</div>
-                        <p data-i18n="portfolio.project6Description">API menggunakan Node.js dan Hapi framework untuk aplikasi
-                            manajemen buku dengan fitur penambahan, penghapusan, dan pencarian buku.</p>
-                    </div>
-                </div>
+               <!-- Project 7: Web Server Project -->
+               <div class="portfolio-item" data-category="web">
+                   <div class="portfolio-image">
+                       <img src="https://media.giphy.com/media/9igGG6KxpY0eY0Sr5u/giphy.gif?cid=790b7611kg5fhv8xnqdcn0nqpe6cr5p9qoux0tzln1y0fxrp&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+                           alt="Web Server Project">
+                       <div class="portfolio-overlay">
+                           <a href="https://www.dicoding.com/certificates/ERZR0L84QXYV" target="_blank"
+                               title="View Project"><i class="fas fa-link"></i></a>
+                       </div>
+                   </div>
+                   <div class="portfolio-content">
+                       <h3 class="portfolio-title" data-i18n="portfolio.project7Title">Proyek Membangun Web Server</h3>
+                       <div class="portfolio-category">Networking, Node.js, NGINX</div>
+                       <p data-i18n="portfolio.project7Description">Sistem web server terintegrasi dengan Node.js sebagai backend
+                           dan NGINX sebagai reverse proxy server, menerapkan konsep jaringan dasar seperti model OSI,
+                           TCP/IP, dan keamanan jaringan.</p>
+                   </div>
+               </div>
 
-                <!-- Project 7: Web Server Project -->
-                <div class="portfolio-item" data-category="web">
-                    <div class="portfolio-image">
-                        <img src="https://media.giphy.com/media/9igGG6KxpY0eY0Sr5u/giphy.gif?cid=790b7611kg5fhv8xnqdcn0nqpe6cr5p9qoux0tzln1y0fxrp&ep=v1_gifs_search&rid=giphy.gif&ct=g"
-                            alt="Web Server Project">
-                        <div class="portfolio-overlay">
-                            <a href="https://www.dicoding.com/certificates/ERZR0L84QXYV" target="_blank"
-                                title="View Project"><i class="fas fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3 class="portfolio-title" data-i18n="portfolio.project7Title">Proyek Membangun Web Server</h3>
-                        <div class="portfolio-category">Networking, Node.js, NGINX</div>
-                        <p data-i18n="portfolio.project7Description">Sistem web server terintegrasi dengan Node.js sebagai backend
-                            dan NGINX sebagai reverse proxy server, menerapkan konsep jaringan dasar seperti model OSI,
-                            TCP/IP, dan keamanan jaringan.</p>
-                    </div>
-                </div>
+               <!-- Project 8: Sentiment Analysis -->
+               <div class="portfolio-item" data-category="machine-learning">
+                   <div class="portfolio-image">
+                       <img src="https://media.giphy.com/media/TJP7EH5i1fB2rKeWbf/giphy.gif?cid=ecf05e47l8w1f93at7ktsfng8p5pgp00bgav50wpbdu1i03m&ep=v1_gifs_related&rid=giphy.gif&ct=g"
+                           alt="Sentiment Analysis Project">
+                       <div class="portfolio-overlay">
+                           <a href="https://www.dicoding.com/certificates/QLZ970M42P5D" target="_blank"
+                               title="View Project"><i class="fas fa-link"></i></a>
+                       </div>
+                   </div>
+                   <div class="portfolio-content">
+                       <h3 class="portfolio-title" data-i18n="portfolio.project8Title">Proyek Analisis Sentimen</h3>
+                       <div class="portfolio-category">NLP, Machine Learning, Python</div>
+                       <p data-i18n="portfolio.project8Description">Model prediktif untuk analisis sentimen dengan akurasi di atas
+                           92%, menggunakan teknik machine learning seperti Naive Bayes, SVM, dan Random Forest.</p>
+                   </div>
+               </div>
 
-                <!-- Project 8: Sentiment Analysis -->
-                <div class="portfolio-item" data-category="machine-learning">
-                    <div class="portfolio-image">
-                        <img src="https://media.giphy.com/media/TJP7EH5i1fB2rKeWbf/giphy.gif?cid=ecf05e47l8w1f93at7ktsfng8p5pgp00bgav50wpbdu1i03m&ep=v1_gifs_related&rid=giphy.gif&ct=g"
-                            alt="Sentiment Analysis Project">
-                        <div class="portfolio-overlay">
-                            <a href="https://www.dicoding.com/certificates/QLZ970M42P5D" target="_blank"
-                                title="View Project"><i class="fas fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3 class="portfolio-title" data-i18n="portfolio.project8Title">Proyek Analisis Sentimen</h3>
-                        <div class="portfolio-category">NLP, Machine Learning, Python</div>
-                        <p data-i18n="portfolio.project8Description">Model prediktif untuk analisis sentimen dengan akurasi di atas
-                            92%, menggunakan teknik machine learning seperti Naive Bayes, SVM, dan Random Forest.</p>
-                    </div>
-                </div>
+               <!-- Project 9: Movie Recommendation System -->
+               <div class="portfolio-item" data-category="machine-learning">
+                   <div class="portfolio-image">
+                       <img src="https://media.giphy.com/media/3ov9jNziFTMfzSumAw/giphy.gif?cid=ecf05e47mp1gnkczr3llkxevw5unqfh4p1cy4we1840kzyss&ep=v1_gifs_related&rid=giphy.gif&ct=g"
+                           alt="Movie Recommendation System">
+                       <div class="portfolio-overlay">
+                           <a href="https://www.dicoding.com/certificates/JLX14G1MGX72" target="_blank"
+                               title="View Project"><i class="fas fa-link"></i></a>
+                       </div>
+                   </div>
+                   <div class="portfolio-content">
+                       <h3 class="portfolio-title" data-i18n="portfolio.project9Title">Sistem Rekomendasi Film</h3>
+                       <div class="portfolio-category">Machine Learning, Python, TF-IDF, SVD</div>
+                       <p data-i18n="portfolio.project9Description">Sistem rekomendasi film menggunakan content-based filtering dan
+                           collaborative filtering dengan dataset MovieLens 100K, mencapai Precision@5 100% dan RMSE 0.9406.</p>
+                   </div>
+               </div>
 
-                <!-- Project 9: Movie Recommendation System -->
-                <div class="portfolio-item" data-category="machine-learning">
-                    <div class="portfolio-image">
-                        <img src="https://media.giphy.com/media/3ov9jNziFTMfzSumAw/giphy.gif?cid=ecf05e47mp1gnkczr3llkxevw5unqfh4p1cy4we1840kzyss&ep=v1_gifs_related&rid=giphy.gif&ct=g"
-                            alt="Movie Recommendation System">
-                        <div class="portfolio-overlay">
-                            <a href="https://www.dicoding.com/certificates/JLX14G1MGX72" target="_blank"
-                                title="View Project"><i class="fas fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3 class="portfolio-title" data-i18n="portfolio.project9Title">Sistem Rekomendasi Film</h3>
-                        <div class="portfolio-category">Machine Learning, Python, TF-IDF, SVD</div>
-                        <p data-i18n="portfolio.project9Description">Sistem rekomendasi film menggunakan content-based filtering dan
-                            collaborative filtering dengan dataset MovieLens 100K, mencapai Precision@5 100% dan RMSE 0.9406.</p>
-                    </div>
-                </div>
+               <!-- Project 10: Image Classification -->
+               <div class="portfolio-item" data-category="machine-learning">
+                   <div class="portfolio-image">
+                       <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmUzMXdkazdobW9jNGJxYjN1b211emNxb3NndnFlbDUwNTAxbng4ZSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/gZ5jPakg02sujkkkg5/giphy.gif"
+                           alt="Image Classification">
+                       <div class="portfolio-overlay">
+                           <a href="https://www.dicoding.com/certificates/98XW27K8WPM3" target="_blank"
+                               title="View Project"><i class="fas fa-link"></i></a>
+                       </div>
+                   </div>
+                   <div class="portfolio-content">
+                       <h3 class="portfolio-title" data-i18n="portfolio.project10Title">Klasifikasi Gambar (Rock-Paper-Scissors)
+                       </h3>
+                       <div class="portfolio-category">Deep Learning, TensorFlow</div>
+                       <p data-i18n="portfolio.project10Description">Jaringan saraf tiruan menggunakan TensorFlow untuk mengenali
+                           bentuk tangan yang membentuk gunting, batu, atau kertas.</p>
+                   </div>
+               </div>
 
-                <!-- Project 10: Image Classification -->
-                <div class="portfolio-item" data-category="machine-learning">
-                    <div class="portfolio-image">
-                        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmUzMXdkazdobW9jNGJxYjN1b211emNxb3NndnFlbDUwNTAxbng4ZSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/gZ5jPakg02sujkkkg5/giphy.gif"
-                            alt="Image Classification">
-                        <div class="portfolio-overlay">
-                            <a href="https://www.dicoding.com/certificates/98XW27K8WPM3" target="_blank"
-                                title="View Project"><i class="fas fa-link"></i></a>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3 class="portfolio-title" data-i18n="portfolio.project10Title">Klasifikasi Gambar (Rock-Paper-Scissors)
-                        </h3>
-                        <div class="portfolio-category">Deep Learning, TensorFlow</div>
-                        <p data-i18n="portfolio.project10Description">Jaringan saraf tiruan menggunakan TensorFlow untuk mengenali
-                            bentuk tangan yang membentuk gunting, batu, atau kertas.</p>
-                    </div>
-                </div>
-
-                <!-- Project 11: Directory Listing App - Perbaikan formatting -->
-                <div class="portfolio-item" data-category="web">
-                    <div class="portfolio-image">
-                        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3VmMW1idzUybm41amR2bGo1Z2xhaXloa3VpanJ4cnB5dDNvb2hrOCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/uVtmOulvj0rb3vJI5y/giphy.gif" 
-                            alt="Directory Listing App">
-                        <div class="portfolio-overlay">
-                            <a href="https://www.codepolitan.com/c/WX4ATAM/" target="_blank" title="View Project">
-                                <i class="fas fa-link"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <h3 class="portfolio-title" data-i18n="portfolio.project11Title">Directory Listing App dengan Express.js</h3>
-                        <div class="portfolio-category">Web Development, Node.js, REST API</div>
-                        <p data-i18n="portfolio.project11Description">Aplikasi manajemen direktori dengan fitur CRUD lengkap menggunakan Express.js, implementasi RESTful API, dan integrasi database MySQL.</p>
-                    </div>
-                </div>
-            </div> 
-        </div>
-    </section>
+               <!-- Project 11: Directory Listing App - Perbaikan formatting -->
+               <div class="portfolio-item" data-category="web">
+                   <div class="portfolio-image">
+                       <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3VmMW1idzUybm41amR2bGo1Z2xhaXloa3VpanJ4cnB5dDNvb2hrOCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/uVtmOulvj0rb3vJI5y/giphy.gif" 
+                           alt="Directory Listing App">
+                       <div class="portfolio-overlay">
+                           <a href="https://www.codepolitan.com/c/WX4ATAM/" target="_blank" title="View Project">
+                               <i class="fas fa-link"></i>
+                           </a>
+                       </div>
+                   </div>
+                   <div class="portfolio-content">
+                       <h3 class="portfolio-title" data-i18n="portfolio.project11Title">Directory Listing App dengan Express.js</h3>
+                       <div class="portfolio-category">Web Development, Node.js, REST API</div>
+                       <p data-i18n="portfolio.project11Description">Aplikasi manajemen direktori dengan fitur CRUD lengkap menggunakan Express.js, implementasi RESTful API, dan integrasi database MySQL.</p>
+                   </div>
+               </div>
+           </div> 
+       </div>
+   </section>
 
    <!-- Certifications Section -->
    <section id="certifications">
@@ -2922,6 +2919,3 @@
 
 </body>
 </html>
-
-
-
