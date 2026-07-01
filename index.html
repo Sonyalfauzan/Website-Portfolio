@@ -145,6 +145,29 @@
             --box-border: #334155;
             --slider-bg: #334155;
             --card-gradient: linear-gradient(135deg, rgba(30,41,59,0.9) 0%, rgba(15,23,42,0.9) 100%);
+            --primary: #38bdf8;
+            --primary-dark: #0ea5e9;
+        }
+
+        /* Dark Mode Text Visibility Fixes */
+        body.dark-mode .logo span,
+        body.dark-mode .logo-accent {
+            color: #38bdf8 !important;
+        }
+
+        body.dark-mode .info-box h3 {
+            color: var(--primary);
+        }
+
+        body.dark-mode .section-subtitle {
+            color: var(--primary);
+        }
+
+        body.dark-mode .section-title h2 {
+            background: linear-gradient(135deg, var(--primary), #7dd3fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         /* Reset and Base Styles */
@@ -418,6 +441,15 @@
             font-weight: 800;
             color: var(--primary);
             text-decoration: none;
+        }
+
+        .logo-accent {
+            color: var(--primary-dark);
+            transition: var(--transition);
+        }
+
+        body.dark-mode .logo-accent {
+            color: #38bdf8;
         }
 
         .nav-menu {
@@ -1041,7 +1073,7 @@
 
         .portfolio-overlay a:hover {
             background: var(--accent);
-            color: var(--dark);
+            color: #0f172a;
             transform: scale(1.15) rotate(10deg);
             box-shadow: 0 10px 30px rgba(245, 158, 11, 0.4);
         }
@@ -1788,7 +1820,7 @@
     <header>
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo">Sony<span style="color: var(--dark);">Alfauzan</span></a>
+                <a href="#" class="logo">Sony<span class="logo-accent">Alfauzan</span></a>
 
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="#home" class="nav-link active" data-i18n="nav.home">Beranda</a></li>
