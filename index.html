@@ -150,24 +150,61 @@
         }
 
         /* Dark Mode Text Visibility Fixes */
+        body.dark-mode .logo,
         body.dark-mode .logo span,
         body.dark-mode .logo-accent {
             color: #38bdf8 !important;
         }
 
         body.dark-mode .info-box h3 {
-            color: var(--primary);
+            color: #38bdf8 !important;
         }
 
         body.dark-mode .section-subtitle {
-            color: var(--primary);
+            color: #38bdf8 !important;
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(14, 165, 233, 0.15));
+            border-color: rgba(56, 189, 248, 0.3);
         }
 
         body.dark-mode .section-title h2 {
-            background: linear-gradient(135deg, var(--primary), #7dd3fc);
+            background: linear-gradient(135deg, #38bdf8, #7dd3fc);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+        }
+
+        /* Enhanced skill-tag visibility for both light and dark modes */
+        .skill-tag {
+            padding: 0.5rem 1rem;
+            background: var(--gray-200);
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: var(--transition);
+            cursor: pointer;
+            color: var(--gray-800);
+            border: 1px solid var(--gray-300);
+        }
+
+        body.dark-mode .skill-tag {
+            background: rgba(56, 189, 248, 0.15);
+            color: #e0f2fe !important;
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+
+        .skill-tag:hover {
+            background: var(--primary);
+            color: var(--white) !important;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(14, 165, 233, 0.4);
+        }
+
+        body.dark-mode .skill-tag:hover {
+            background: #38bdf8;
+            color: #0f172a !important;
         }
 
         /* Reset and Base Styles */
@@ -333,6 +370,7 @@
             background-clip: text;
             font-weight: 800;
             letter-spacing: -0.03em;
+            color: var(--text-color); /* Fallback untuk aksesibilitas */
         }
 
         /* Enhanced Button Styles */
@@ -446,10 +484,6 @@
         .logo-accent {
             color: var(--primary-dark);
             transition: var(--transition);
-        }
-
-        body.dark-mode .logo-accent {
-            color: #38bdf8;
         }
 
         .nav-menu {
@@ -812,25 +846,7 @@
             gap: 0.75rem;
         }
 
-        .skill-tag {
-            padding: 0.5rem 1rem;
-            background: var(--gray-200);
-            border-radius: 25px;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: var(--transition);
-            cursor: pointer;
-            color: var(--text-color);
-        }
-
-        .skill-tag:hover {
-            background: var(--primary);
-            color: var(--white);
-            transform: translateY(-3px);
-        }
+        /* Experience Timeline sudah ada di bawah */
 
         /* Enhanced Experience Timeline */
         .experience-timeline {
@@ -1421,6 +1437,18 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+        }
+
+        body.dark-mode .footer-logo {
+            background: linear-gradient(135deg, #38bdf8, #7dd3fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        body.dark-mode .footer-logo span {
+            color: #7dd3fc !important;
+            -webkit-text-fill-color: #7dd3fc !important;
         }
 
         .footer-description {
@@ -2534,7 +2562,7 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">Sony<span style="color: var(--light);">Alfauzan</span></div>
+                <div class="footer-logo">Sony<span style="color: #7dd3fc;">Alfauzan</span></div>
 
                 <div class="footer-social">
                     <a href="https://www.linkedin.com/in/sonyalfauzan/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
