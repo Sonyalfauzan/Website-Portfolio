@@ -1129,6 +1129,74 @@
             font-size: 0.95rem;
         }
 
+        /* Scientific Publications Section */
+        .publication-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        .publication-item {
+            background: var(--card-gradient);
+            border: 1px solid var(--box-border);
+            border-radius: var(--border-radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        .publication-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--primary-gradient);
+        }
+        .publication-item:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl), var(--shadow-glow);
+        }
+        .publication-year {
+            display: inline-block;
+            margin-bottom: 1rem;
+            padding: 0.3rem 0.85rem;
+            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(59, 130, 246, 0.1));
+            border: 1px solid rgba(14, 165, 233, 0.2);
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+        .publication-title {
+            font-size: 1.2rem;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        .publication-details {
+            font-size: 0.95rem;
+            line-height: 1.75;
+            margin-bottom: 1.25rem;
+            color: var(--text-color);
+        }
+        .publication-metrics {
+            margin: 1rem 0 1.25rem;
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            background: rgba(14, 165, 233, 0.08);
+            border: 1px solid rgba(14, 165, 233, 0.18);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+        .publication-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 700;
+            overflow-wrap: anywhere;
+        }
+
         /* Enhanced Certifications Section */
         #certifications {
             background: linear-gradient(135deg, var(--primary-dark), var(--primary));
@@ -1854,6 +1922,7 @@
                     <li><a href="#home" class="nav-link active" data-i18n="nav.home">Beranda</a></li>
                     <li><a href="#about" class="nav-link" data-i18n="nav.about">Tentang</a></li>
                     <li><a href="#portfolio" class="nav-link" data-i18n="nav.portfolio">Portfolio</a></li>
+                    <li><a href="#publications" class="nav-link" data-i18n="nav.publications">Publikasi</a></li>
                     <li><a href="#certifications" class="nav-link" data-i18n="nav.certifications">Sertifikasi</a></li>
                     <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Kontak</a></li>
                 </ul>
@@ -2254,15 +2323,15 @@
                     </div>
                 </div>
 
-                <!-- Project 12: Aplikasi HRIS (Private) -->
+                <!-- Project 12: Aplikasi HRIS (Live Demo) -->
                 <div class="portfolio-item" data-category="web" style="position: relative;">
                     <div class="portfolio-image">
-                        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGt5cjRqNmF5YnE3eHdvZ2xhaXloa3VpanJ4cnB5dDNvb2hrOCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/L3Q8dT7vT6gKk/giphy.gif" 
-                            alt="HRIS System - Human Resource Information Management">
+                        <img src="https://www.kynection.com.au/wp-content/uploads/2023/03/HR-Dashboard-GIF.gif" 
+                            alt="Demo dashboard Human Resource Information System untuk pengelolaan proses dan data HR">
                         <div class="portfolio-overlay">
-                            <span style="color: #fff; font-size: 0.9rem; background: rgba(0,0,0,0.7); padding: 0.5rem 1rem; border-radius: 20px;">
-                                <i class="fas fa-lock"></i> Private Project
-                            </span>
+                            <a href="https://perth-despite-apply-gamecube.trycloudflare.com/" target="_blank" rel="noopener noreferrer" title="Buka Demo HRIS" aria-label="Buka demo aplikasi HRIS">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="portfolio-content">
@@ -2290,6 +2359,46 @@
                     </div>
                 </div>
             </div> 
+        </div>
+    </section>
+
+    <!-- Scientific Publications Section -->
+    <section id="publications">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-subtitle" data-i18n="publications.subtitle">PUBLIKASI ILMIAH</span>
+                <h2 data-i18n="publications.title">Riset & Karya Ilmiah</h2>
+            </div>
+            <div class="publication-grid">
+                <article class="publication-item fade-in">
+                    <span class="publication-year">2026</span>
+                    <h3 class="publication-title" data-i18n="publications.credit.title">Alfauzan, S. Credit Risk Prediction Using LightGBM with Time-Aware Validation and SHAP Interpretation.</h3>
+                    <p class="publication-details" data-i18n="publications.credit.details">Penelitian independen, terpisah dari virtual internship ID/X Partners.</p>
+                    <div class="publication-metrics"><strong>Out-of-time test set:</strong> AUC-ROC 0.711, KS-statistic 0.309, PSI 0.0685.</div>
+                    <a class="publication-link" href="https://doi.org/10.33830/jmst.v27i1.13616.2026" target="_blank" rel="noopener noreferrer" aria-label="Buka publikasi Credit Risk Prediction melalui DOI">
+                        <i class="fas fa-external-link-alt"></i>
+                        doi.org/10.33830/jmst.v27i1.13616.2026
+                    </a>
+                </article>
+                <article class="publication-item fade-in">
+                    <span class="publication-year">2025</span>
+                    <h3 class="publication-title">Ibrahim, M. M., &amp; Alfauzan, S. (2025). Analisis Kinerja Model Machine Learning untuk Mendeteksi Transaksi Fraud pada Sistem Pembayaran Online.</h3>
+                    <p class="publication-details"><em>Jurnal Ilmiah Nusantara (JINU)</em>, 2(3).</p>
+                    <a class="publication-link" href="https://doi.org/10.61722/jinu.v2i3.4276" target="_blank" rel="noopener noreferrer" aria-label="Buka publikasi deteksi transaksi fraud melalui DOI">
+                        <i class="fas fa-external-link-alt"></i>
+                        https://doi.org/10.61722/jinu.v2i3.4276
+                    </a>
+                </article>
+                <article class="publication-item fade-in">
+                    <span class="publication-year">2024</span>
+                    <h3 class="publication-title">Alfauzan, S. (2024). Pengembangan Sistem Rekomendasi Film Berbasis Collaborative Filtering Menggunakan Singular Value Decomposition (SVD).</h3>
+                    <p class="publication-details" data-i18n="publications.movie.details">Artikel Ilmiah (Tugas Akhir), Universitas Terbuka.</p>
+                    <a class="publication-link" href="http://student-repository.ut.ac.id/id/eprint/59631" target="_blank" rel="noopener noreferrer" aria-label="Buka artikel sistem rekomendasi film di repositori Universitas Terbuka">
+                        <i class="fas fa-external-link-alt"></i>
+                        student-repository.ut.ac.id/id/eprint/59631
+                    </a>
+                </article>
+            </div>
         </div>
     </section>
 
@@ -2583,6 +2692,7 @@
                     <a href="#home" data-i18n="footer.home">Beranda</a>
                     <a href="#about" data-i18n="footer.about">Tentang</a>
                     <a href="#portfolio" data-i18n="footer.portfolio">Portfolio</a>
+                    <a href="#publications" data-i18n="footer.publications">Publikasi</a>
                     <a href="#certifications" data-i18n="footer.certifications">Sertifikasi</a>
                     <a href="#contact" data-i18n="footer.contact">Kontak</a>
                 </div>
@@ -2824,6 +2934,7 @@
                         'nav.home': 'Home',
                         'nav.about': 'About',
                         'nav.portfolio': 'Portfolio',
+                        'nav.publications': 'Publications',
                         'nav.certifications': 'Certifications',
                         'nav.contact': 'Contact',
 
@@ -2931,6 +3042,12 @@
                         'portfolio.project13Title': 'SI-TAT BNN — Integrated Assessment Team Information System',
                         'portfolio.project13Description': 'Built a narcotics assessment case management information system based on official BNN regulations to support TAT operations at BNNP North Kalimantan. Key features: case registration & management, legal assessment, medical assessment, joint decisions & recommendations, document completeness management, audit log of all actions, and agency configuration. Implemented role-based access system (Admin, Medical Team, Legal Team). Integrated official document export in .docx format according to BNN templates, ready to print directly from the system.',
 
+                        // Publications
+                        'publications.subtitle': 'SCIENTIFIC PUBLICATIONS',
+                        'publications.title': 'Research & Scholarly Work',
+                        'publications.credit.title': 'Alfauzan, S. Credit Risk Prediction Using LightGBM with Time-Aware Validation and SHAP Interpretation.',
+                        'publications.credit.details': 'Independent research, separate from the ID/X Partners virtual internship.',
+                        'publications.movie.details': 'Scientific Article (Undergraduate Final Project), Universitas Terbuka.',
                         // Certifications
                         'cert.subtitle': 'CERTIFICATIONS',
                         'cert.title': 'Training & Certifications',
@@ -2976,6 +3093,7 @@
                         'footer.home': 'Home',
                         'footer.about': 'About',
                         'footer.portfolio': 'Portfolio',
+                        'footer.publications': 'Publications',
                         'footer.certifications': 'Certifications',
                         'footer.contact': 'Contact',
                         'footer.copyright': '© 2025 Sony Alfauzan. All rights reserved.'
@@ -2985,6 +3103,7 @@
                         'nav.home': 'Beranda',
                         'nav.about': 'Tentang',
                         'nav.portfolio': 'Portfolio',
+                        'nav.publications': 'Publikasi',
                         'nav.certifications': 'Sertifikasi',
                         'nav.contact': 'Kontak',
 
@@ -3092,6 +3211,12 @@
                         'portfolio.project13Title': 'SI-TAT BNN — Sistem Informasi Tim Asesmen Terpadu',
                         'portfolio.project13Description': 'Membangun sistem informasi manajemen kasus asesmen narkotika berbasis regulasi resmi BNN untuk mendukung operasional TAT di BNNP Kalimantan Utara. Fitur utama: registrasi dan manajemen kasus, asesmen hukum, asesmen medis, keputusan bersama & rekomendasi, manajemen kelengkapan berkas, audit log seluruh aksi, dan konfigurasi instansi. Menerapkan sistem role-based access (Admin, Tim Medis, Tim Hukum). Mengintegrasikan ekspor dokumen resmi berformat .docx sesuai template BNN, siap cetak langsung dari sistem.',
 
+                        // Publications
+                        'publications.subtitle': 'PUBLIKASI ILMIAH',
+                        'publications.title': 'Riset & Karya Ilmiah',
+                        'publications.credit.title': 'Alfauzan, S. Credit Risk Prediction Using LightGBM with Time-Aware Validation and SHAP Interpretation.',
+                        'publications.credit.details': 'Penelitian independen, terpisah dari virtual internship ID/X Partners.',
+                        'publications.movie.details': 'Artikel Ilmiah (Tugas Akhir), Universitas Terbuka.',
                         // Certifications
                         'cert.subtitle': 'SERTIFIKASI',
                         'cert.title': 'Pelatihan & Sertifikasi',
@@ -3137,6 +3262,7 @@
                         'footer.home': 'Beranda',
                         'footer.about': 'Tentang',
                         'footer.portfolio': 'Portfolio',
+                        'footer.publications': 'Publikasi',
                         'footer.certifications': 'Sertifikasi',
                         'footer.contact': 'Kontak',
                         'footer.copyright': '© 2025 Sony Alfauzan. All rights reserved.'
